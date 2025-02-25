@@ -1,6 +1,7 @@
 // GuessTheNumber Game - Java Lab 1 - 25th February 2025 | M. Rifki Paranrengi - 0806022410017
 import java.util.Scanner;
 
+
 public class GTN {
     public static void main(String[] args)throws Exception {
         // Variables
@@ -22,17 +23,17 @@ public class GTN {
 
         // Loop
         do {
-            System.out.print("Enter your guess: ");
+            System.out.print("\u001b[0mEnter your guess: ");
             userGuess = scanner.nextInt();
             attempts++;
 
             if (userGuess < numberToGuess) {
-                System.out.println("Too low!");
+                System.out.println("\u001b[33mToo low!");
             } else if (userGuess > numberToGuess) { 
-                System.out.println("Too high!");
+                System.out.println("\u001b[31mToo high!");
             } else {
                 System.out.println("You got it!");
-                System.out.println("Congratulations! It took you " + attempts + " attempts.");
+                System.out.println("\u001b[32mCongratulations! \u001b[0mIt took you " + attempts + " attempts.");
             }
         } while (userGuess != numberToGuess);
 
